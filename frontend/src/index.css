@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  --color-bg: #ffda4f;
+  --color-bg-variant: #28284f;
+  --color-primary: #007bff;
+  /* Blue */
+  --color-primary-variant: #0056b3;
+  /* Darker Blue */
+  --color-accent: #ff4500;
+  /* Orange-Red */
+  --color-accent-variant: #cc3700;
+  /* Darker Orange-Red */
+  --color-white: #fff;
+  --color-light: #f8f8f8;
+  /* Light Gray */
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+}
+
+
+/* ============ GENERAL STYLES ============ */
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+section {
+  margin-top: 8rem;
+}
+
+section>h2,
+section>h5 {
+  text-align: center;
+  color: var(--color-light);
+}
+
+section>h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+.text-light {
+  color: var(--color-light);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: 1px orange;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-secondary {
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+.btn-accent {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+/* Additional styles for hover/focus effects */
+.btn:hover,
+.btn:focus {
+  opacity: 0.8;
+  outline: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--color-primary-variant);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-accent:hover,
+.btn-accent:focus {
+  background-color: var(--color-accent-variant);
+}
+
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+/* ============ MEDIA QUERIES (MEDIUM DEVICES) ============ */
+
+@media screen and (max-width: 1024px) {
+  .container {
+    width: var(--container-width-md);
+  }
+
+  section {
+    margin-top: 6rem;
+  }
+}
+
+
+/* ============ MEDIA QUERIES (SMALL DEVICES) ============ */
+
+@media screen and (max-width: 600px) {
+  .container {
+    width: var(--container-width-sm);
+  }
+
+  section>h2 {
+    margin-bottom: 2rem;
+  }
+}
+
+
+/* ============ HOME PAGE ============ */
+
+
+.logo2 {
+  width: 60%;
+  height: auto;
+  display: block; /* Ensure it's a block element */
+  margin-top: 1rem;
+}
+
+.subtitle {
+  font-size: 3rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-top: 4rem;
+  -webkit-text-stroke: 2px white; /* Add white border around each letter */
+  
+
+
+  @media screen and (min-width: 1200px) {
+    font-size: 4rem;
+  }
+}
+
+.home__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 20rem;
+
+  @media screen and (min-width: 1200px) {
+    .btn {
+      font-size: 1.5rem;
+    }
+
+    gap: 7rem;
+    margin-top: 5rem;
+  }
+}
+
+.home-page__container {
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+
+}
+
+
+
+/* ============ NAV ============ */
+
+
+/* Base styles for the navigation bar */
+/* ============ NAV ============ */
+/* ============ NAV ============ */
+
+.upandsidebar {
+  position: relative;
+}
+
+.upperbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+}
+
+.sidebar-toggle {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.sidebar-toggle.open {
+  display: none;
+}
+
+.logo img {
+  width: 180px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure the image is displayed as a block element */
+  /* Add any additional styling here */
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
+.logout {
+  text-decoration: none;
+  color: var(--color-white);
+  padding: 5px 10px;
+  border-radius: 5px;
+  background-color: var(--color-accent);
+  margin-left: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #ffda4f;
+  color: var(--color-white);
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  border-bottom: 1px solid var(--color-bg-variant);
+}
+
+.close-sidebar {
+  cursor: pointer;
+  position: absolute;
+  top: 5px; /* Adjust as needed */
+  right: 5px; /* Adjust as needed */
+  background-color: red; /* Set background color to red */
+  padding: 1px; /* Add padding for better visibility */
+  border-radius: 20%; /* Set border-radius for a circular shape */
+  height: 20px; /* Set height of the button */
+  width: 20px; /* Set width of the button */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black; /* Add black border */
+}
+
+.nav-childs {
+  display: block;
+  padding: 15px 20px;
+  font-size: 16px;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.nav-childs:hover {
+  background-color: var(--color-bg-variant);
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ============ Auth pages (Login, Register, Reset) ============ */
+
+.auth__form {
+  background-color: var(--color-bg-variant);
+  margin: auto;
+  padding: 30px;
+  border-radius: 5px;
+  width: var(--container-width-md);
+  max-width: 30rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth__form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--color-light);
+  color: var(--color-bg-variant);
+
+  &::placeholder {
+    font-size: 1rem;
+    color: var(--color-bg-variant);
+  }
+
+  &:valid {
+    font-size: 1rem;
+    color: var(--color-bg-variant);
+  }
+}
+
+
+.auth__container .main__title {
+  font-size: 2rem;
+
+  @media screen and (min-width: 1200px) {
+  }
+}
+
+.auth__container .main__title {
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  -webkit-text-stroke: 2px white;
+}
+
+.auth__container .main__title svg {
+  margin-left: 10px;
+  stroke: white; /* Add stroke to the icon */
+  stroke-width: 1px; 
+  /* Add some space between the icon and the text */
+}
+.auth__container{
+  flex-direction: column;
+}
+
+.btn-activate-account {
+  margin: auto;
+  display: block;
+  margin-top: 5rem;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+
+
+
+
+
+
+/* ============ COMPONENTS ============ */
+
+
+/* ============ Spinner ============ */
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--color-primary);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* recorded videos */
+/* recordedvideos.css */
+
+.video-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center horizontally */
+  gap: 20px; /* Adjust the gap between videos */
+}
+
+.video-list-item {
+  flex: 0 1 calc(33.33% - 20px); /* Adjust the width of each video item */
+  /* Subtracting the gap to ensure items don't overflow */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center vertically */
+}
+
+.video-list-item video {
+  width: 100%;
+}
+
+.video-list-item p {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+/* Upload Form */
+.upload-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.upload-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+}
+
+.upload-form h2 {
+  margin-top: 0;
+}
+
+.upload-form input {
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.upload-form button {
+  width: 100%;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.exit-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #777;
+}
+
+.exit-button:hover {
+  color: #333;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+
+/*Delete Form*/
+.delete-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 998;
+}
+
+.delete-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.delete-form p {
+  margin-bottom: 10px;
+}
+
+.delete-form-buttons button {
+  margin-right: 10px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-form-buttons button:first-child {
+  background-color: #dc3545; /* Bootstrap's danger color */
+  color: white;
+}
+
+.delete-form-buttons button:last-child {
+  background-color: #007bff; /* Bootstrap's primary color */
+  color: white;
+}
+
+/* Remarks Form */
+
